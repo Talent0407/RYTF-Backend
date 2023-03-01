@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+<head>
+  <title>Windows 90 ETH</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/98.css"/>
+  <link href="{% static 'app/style.css' %}" rel="stylesheet"/>
+  <script src="{% static 'app/bundle.js' %}"></script>
+  <script src="{% static 'app/utils.js' %}"></script>
+{#  <meta#}
+{#    http-equiv="Content-Security-Policy"#}
+{#    content="default-src 'self'; script-src 'self' cdn-cors.ethers.io cdnjs.cloudflare.com; font-src 'self' unpkg.com; connect-src 'self' wss://*.walletconnect.org https://*.walletconnect.org https://*.infura.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' unpkg.com;"#}
+{#  />#}
+</head>
+
+<body class="h-screen w-screen flex flex-col">
+<div class="w-full h-full" id="desktop">
+  <div class="desktop-screen window inline-block select-none">
+    <div class="flex py-0.5">
+      <div
+        id="disconnectButton"
+        class="cursor-default hover:bg-blue-900 hover:text-white px-1 hidden"
+      >
+        Logout
+      </div>
+    </div>
+  </div>
+  <div class="login-screen window absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+       style="width: 400px">
+    <div class="window-body z-10">
+      <div class="grid grid-cols-6 grid-rows-2 gap-4 justify-items-center">
+        <div class="col-span-6 row-span-1 w-full">
+          <p style="margin-bottom: 3px">Select a <u>w</u>allet:</p>
+          <select id="selectProvider" class="w-full">
+            <option value="metamask">MetaMask</option>
+            <option value="wallet-connect">WalletConnect</option>
+          </select>
+          <input name="walletAddress" id="walletAddress" placeholder="enter your wallet address" class="w-full mt-2 px-2 py-1" />
+        </div>
+        <div class="col-span-6 row-span-1 w-full overflow">
+          <button id="signIn" style="float: right">Sign-In with Ethereum</button>
+          <div>
+            <h4>Message</h4>
+            <p class="bg-white text-black" id="message" style="white-space: pre-wrap;">
+            </p>
+            <hr/>
+            <h4>Signature</h4>
+            <p class="mt-5 bg-white text-black overflow-x-scroll" id="messageSignResult">
+            </p>
+            <h4>Body</h4>
+            <p class="mt-5 bg-white text-black overflow-x-scroll" id="bodyResult">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

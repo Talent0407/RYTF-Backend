@@ -1,0 +1,30 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=eSBEaZbxjHtmfvazndmtcGpRxBnGMZzv
+CELERY_FLOWER_PASSWORD=sq0gF6BEuddJwCvQQOvyuqRDlFmZYDLGuiEnMJkfOYoSUmj2sVt3nssVOpWrwOmt
+
+INFURA_PROJECT_ID=123
+ALCHEMY_API_KEY=demo
+NFTPORT_API_KEY=123
+RYFT_CONTRACT_ADDRESS=0x123
+ALCHEMY_AUTH_TOKEN=key
+ALCHEMY_WEBHOOK_KEY=key
+ALCHEMY_WEBHOOK_WALLET_ACTIVITY_ID=key
+NFTPORT_API_KEY=key
+MNEMONIC_API_KEY=key
+GRAPH_JSON_API_KEY=key
+DISCORD_APP_CLIENT_ID=121
+DISCORD_APP_CLIENT_SECRET=213
+RYFT_DISCORD_SERVER_ID=213
+RYFT_DISCORD_BETA_USER_ROLE_ID=213
+DISCORD_BOT_TOKEN=test
